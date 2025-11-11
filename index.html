@@ -29,6 +29,22 @@
                 </ul>
                 <a href="tel:+73433604344" class="nav-phone">+7 (343) 360-43-44</a>
                 <button class="burger-menu" id="burger-menu"><i class="fas fa-bars"></i></button>
+
+<div class="side-menu" id="sideMenu">
+  <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+  <nav>
+    <ul>
+      <li><a href="#about" class="menu-link">О нас</a></li>
+      <li><a href="#products" class="menu-link">Продукция</a></li>
+      <li><a href="#reviews" class="menu-link">Отзывы</a></li>
+      <li><a href="#partners" class="menu-link">Партнеры</a></li>
+      <li><a href="#contact" class="menu-link">Контакты</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
             </nav>
             <div class="hero-content">
                 <h1>Надежный дистрибьютор комбикормов и кормовых добавок</h1>
@@ -159,32 +175,6 @@
             </div>
         </section>
 
-        <!-- Блок "Состав и сертификаты" -->
-        <section id="composition" class="composition-section">
-            <div class="container composition-container">
-                <div class="composition-text">
-                    <div class="title-with-line-g">
-                        <h2>СОСТАВ</h2>
-                    </div>
-                    <p>Мы предлагаем высококачественные комбикорма и кормовые добавки, состоящие из тщательно подобранных компонентов, чтобы обеспечить сбалансированное питание для животных.</p>
-                </div>
-                <div class="composition-certs">
-                    <div class="cert-image-wrapper">
-                         <img src="cert.png" alt="Сертификат соответствия">
-                    </div>
-                    <div class="cert-list">
-                        <h3>Наши сертификаты — гарантия качества</h3>
-                        <ul>
-                            <li><img src="done.svg" alt="Done"> Прямые договоры с производителями</li>
-                            <li><img src="done.svg" alt="Done"> Гарантия качества всей продукции</li>
-                            <li><img src="done.svg" alt="Done"> Актуальные анализы и прозрачность</li>
-                            <li><img src="done.svg" alt="Done"> Оперативная и стабильная логистика</li>
-                            <li><img src="done.svg" alt="Done"> Доступность и быстрая обратная связь</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
         <!-- Блок "Отзывы клиентов" -->
         <section id="reviews" class="reviews-section">
@@ -196,10 +186,19 @@
                 <div class="slider-wrapper">
                     <div class="slider-track">
                         <!-- Добавьте сюда ваши отзывы -->
-                        <div class="slide"><img src="ot.png" alt="Отзыв 1"><p>Отзыв от ООО "Другая КОМПАНИЯ"</p></div>
-                        <div class="slide"><img src="ot.png" alt="Отзыв 2"><p>Отзыв от ООО "Еще какая-то КОМПАНИЯ"</p></div>
-                        <div class="slide"><img src="ot.png" alt="Отзыв 3"><p>Отзыв от ООО "Третья КОМПАНИЯ"</p></div>
-                        <div class="slide"><img src="ot.png" alt="Отзыв 3"><p>Отзыв от ООО "ЕЩЕ КОМПАНИЯ"</p></div>
+                        <div class="slide">
+                        <img src="ЭКОВАКИНО.png" alt="Отзыв 1" class="review-img">
+                        <p>Отзыв от ООО "Вакинское Агро"</p>
+                        </div>
+
+
+                        <!-- модальное окно -->
+                        <div id="imgModal" class="modal">
+                        <span class="close" id="closeModal">&times;</span>
+                        <img class="modal-content" id="modalImg" alt="Картинка во весь экран">
+                        </div>
+
+                        <div class="slide"><p>Место для ваших отзывов</p></div>
                     </div>
                 </div>
                 <div class="slider-btns">
@@ -228,31 +227,87 @@
     </main>
 
     <!-- Подвал -->
-    <footer id="contact" class="footer">
-        <div class="container footer-container">
-            <img src="logo.svg" alt="Логотип" class="footer-logo">
-            <div class="footer-contacts">
-                <h4>КОНТАКТЫ</h4>
-                <p>г. Екатеринбург, ул. Избирателей 110, офис 5</p>
-                <p><a href="tel:+73433604344">+7 (343) 360‒43‒44</a></p>
-                <p><i class="fab fa-whatsapp"></i> <a href="#">WhatsApp</a></p>
+    <footer id="contact" class="footer" style="background-image: url('image.jpeg');">
+        <div class="footer-overlay">
+            <div class="container footer-container">
+                <img src="logo.svg" alt="Логотип" class="footer-logo">
+                <div class="footer-contacts">
+                    <h4>КОНТАКТЫ</h4>
+                    <p>г. Екатеринбург, ул. Избирателей 110, офис 5</p>
+                    <p><a href="tel:+73433604344">+7 (343) 360‒43‒44</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="#">WhatsApp</a></p>
+                </div>
+                <div class="footer-nav">
+                    <h4>НАВИГАЦИЯ</h4>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#products">Продукция</a></li>
+                        <li><a href="#composition">Состав</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#partners">Партнеры</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-nav">
-                <h4>НАВИГАЦИЯ</h4>
-                <ul>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#products">Продукция</a></li>
-                    <li><a href="#composition">Состав</a></li>
-                    <li><a href="#reviews">Отзывы</a></li>
-                    <li><a href="#partners">Партнеры</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>2017-2025. ООО "Русагроторг"</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    const modal = document.getElementById('imgModal');
+const modalImg = document.getElementById('modalImg');
+const closeBtn = document.getElementById('closeModal');
+
+document.querySelectorAll('.review-img').forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+const burgerBtn = document.getElementById('burger-menu');
+const sideMenu = document.getElementById('sideMenu');
+const menuOverlay = document.getElementById('menuOverlay');
+const closeMenuBtn = document.getElementById('closeMenu');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) { // если прокрутили больше 10px
+    burgerBtn.classList.add('scrolled');
+  } else {
+    burgerBtn.classList.remove('scrolled');
+  }
+});
+
+function openMenu() {
+  sideMenu.classList.add('active');
+  menuOverlay.classList.add('active');
+}
+
+function closeMenu() {
+  sideMenu.classList.remove('active');
+  menuOverlay.classList.remove('active');
+}
+
+burgerBtn.addEventListener('click', openMenu);
+closeMenuBtn.addEventListener('click', closeMenu);
+menuOverlay.addEventListener('click', closeMenu);
+
+document.querySelectorAll('.menu-link').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
+
+
+  </script>
 </body>
 </html>
